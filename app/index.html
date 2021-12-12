@@ -446,85 +446,159 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
+
         <div class="footer__box">
           <a class="logo" href="#">
             <img class="logo__img" src="images/Logo.svg" alt="Логотип">
           </a>
-          <label class="sr-only" for="name">Ваш email</label>
-          <input class="footer__input" type="email" name="email" id="email" placeholder="Ваш email" required>
+          <div class="footer__email">
+            <label class="sr-only" for="name">Ваш email</label>
+            <input class="footer__input" type="email" name="email" id="email" placeholder="Ваш email" required>
+          </div>
           <button class="footer__btn" type="button">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.318 14.3001C10.0587 14.3001 9.81927 14.1616 9.70234 13.9406L7.66076 10.0822C7.54864 9.87034 7.5679 9.61684 7.71028 9.42119L11.0058 5.20009L6.53816 8.31359C6.33112 8.44879 6.06285 8.46569 5.83861 8.36039L1.75613 6.43184C1.51125 6.31549 1.36199 6.07304 1.37712 5.81434C1.39156 5.55564 1.56835 5.32944 1.82561 5.24039L14.895 0.690388C15.1461 0.603938 15.4288 0.660488 15.6193 0.840538C15.8092 1.01929 15.8711 1.28709 15.7782 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3434 14.2994 10.3304 14.3001 10.318 14.3001Z"
+                fill="white" />
+            </svg>
             Подписаться
           </button>
         </div>
 
-        <ul class="footer__list">
-          <li class="footer__link">
+        <nav class="footer__menu">
+          <ul class="footer__list">
+            <li class="footer__link">
+              <a href="#" class="footer__links">Как это работает</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Продукты</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Блюда</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Меню</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">О нас</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Новости</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Партнеры</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">ЧаВо</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Скачать приложение</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Блог</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Что нового?</a>
+            </li>
+            <li class="footer__link">
+              <a href="#" class="footer__links">Карта сайта</a>
+            </li>
+          </ul>
+        </nav>
 
-            <a href="#" class="footer__links">Как это работает</a>
+        <address class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <svg class="contacts__profile" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="Iconly/Light/Location">
+                  <g id="Location">
+                    <path id="Stroke 1" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </g>
+              </svg>
+              <a href="#" class="contacts__link">
+                ул. Смирнова 2/3
+              </a>
+            </li>
 
-          </li>
-          <li class="footer__link">
+            <li class="contacts__item">
+              <svg class="contacts__profile" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="Iconly/Light/Calling">
+                  <g id="Calling">
+                    <path id="Stroke 1" d="M14.353 2.5C18.054 2.911 20.978 5.831 21.393 9.532" stroke="#31352B"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Stroke 3" d="M14.353 6.04297C16.124 6.38697 17.508 7.77197 17.853 9.54297"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Stroke 5" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M11.0315 12.4724C15.0205 16.4604 15.9254 11.8467 18.4653 14.3848C20.9138 16.8328 22.3222 17.3232 19.2188 20.4247C18.8302 20.737 16.3613 24.4943 7.68447 15.8197C-0.993406 7.144 2.76157 4.67244 3.07394 4.28395C6.18377 1.17385 6.66682 2.58938 9.11539 5.03733C11.6541 7.5765 7.04254 8.48441 11.0315 12.4724Z"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </g>
+              </svg>
 
-            <a href="#" class="footer__links">Продукты</a>
+              <a href="#" class="contacts__link">
+                79068057043
+              </a>
+            </li>
 
-          </li>
-          <li class="footer__link">
+            <li class="contacts__item">
+              <svg class="contacts__profile" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="Iconly/Light/Message">
+                  <g id="Message">
+                    <path id="Stroke 1"
+                      d="M17.9026 8.85107L13.4593 12.4641C12.6198 13.1301 11.4387 13.1301 10.5992 12.4641L6.11841 8.85107"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z"
+                      stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </g>
+              </svg>
+              <a href="#" class="contacts__link">
+                support@sfood.com
+              </a>
+            </li>
+          </ul>
 
-            <a href="#" class="footer__links">Блюда</a>
+          <ul class="social">
 
-          </li>
-          <li class="footer__link">
+            <li class="social__item">
+              <a class="social__link" href="#" style="background-image: url('images/facebook.svg')">
+                <span class="sr-only">Ссылка на фейсбук</span>
+              </a>
+            </li>
 
-            <a href="#" class="footer__links">Меню</a>
+            <li class="social__item">
+              <a class="social__link" href="#" style="background-image: url('images/twitter.svg')">
+                <span class="sr-only">Ссылка на твитер</span>
+              </a>
+            </li>
 
-          </li>
-          <li class="footer__link">
+            <li class="social__item">
+              <a class="social__link" href="#" style="background-image: url('images/instagram.svg')">
+                <span class="sr-only">Ссылка на инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </address>
 
-            <a href="#" class="footer__links">О нас</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Новости</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Партнеры</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">ЧаВо</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Скачать приложение</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Блог</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Что нового?</a>
-
-          </li>
-          <li class="footer__link">
-
-            <a href="#" class="footer__links">Карта сайта</a>
-
-          </li>
-        </ul>
-
-        
       </div>
     </div>
-  </footer>
 
+    <div class="footer__copyright">
+      <p>
+        © 2021 Simple Food
+      </p>
+    </div>
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>
