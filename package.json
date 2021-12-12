@@ -1,0 +1,35 @@
+{
+  "name": "hw12",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.6.0",
+    "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "module-concat": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShevtsovaTatiana/fluffy-parakeet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShevtsovaTatiana/fluffy-parakeet/issues"
+  },
+  "homepage": "https://github.com/ShevtsovaTatiana/fluffy-parakeet#readme",
+  "description": ""
+}
