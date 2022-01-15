@@ -1,69 +1,10 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-ul,
-ol {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-* {
-  outline: none;
-}
-
 body {
-background-color: #F9FAFF;
-font-family: Rubik;
+background-color: $body-color;
+font-family: 'Rubik';
 font-weight: 400;
 font-size: 20px;
 line-height: 1.3;
-color: #31352B;
+color: $default-color;
 }
 
 .sr-only {
@@ -79,9 +20,59 @@ color: #31352B;
   overflow: hidden;
 }
 
+.section {
+  padding: 60px 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 36px;
+  margin: 60px 0;
+  color: $title-color;
+
+  &--stay-home {
+    margin: -10px 0 30px;
+  }
+
+  &--mob-app {
+    margin: 40px 0 50px;
+  }
+
+  &--reviews {
+    margin: 0 0 45px;
+  }
+}
+
+.button {
+  background-color: $accent-color;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: $fill-color;
+  padding: 11px 32px;
+  font-size: 18px;
+  transition: color 0.4s linear, background-color 0.3s ease-in-out;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    color: $accent-color;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    background-color: rgba(255, 122, 80, 0.1);
+  }
 }
 
