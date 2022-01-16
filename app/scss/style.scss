@@ -5,61 +5,7 @@
 @import 'libs';
 @import 'global';
 
-.slider {
-  position: relative;
-}
 
-.slick-arrow {
-  position: absolute;
-  padding: 0;
-  bottom: 0;
-  z-index: 10;
-  font-size: 0;
-  cursor: pointer;
-  background-color: transparent;
-  border: 3px solid transparent;
-  border-radius: 50%;
-
-  &--active {
-    background-color: $fill-color;
-
-    svg {
-      fill: $accent-color;
-      stroke: $accent-color;
-    }
-  }
-
-  &:focus {
-    border: 3px solid $accent-color;
-  }
-
-  &:hover {
-    background-color: #FFF2ED;
-
-    svg {
-      fill: #FFAE94;
-      stroke: #FFAE94;
-
-    }
-  }
-
-  &:active {
-    background-color: #FFF2ED;
-
-    svg {
-      fill: $accent-color;
-      stroke: transparent;
-    }
-  }
-}
-
-.slick-prev {
-  left: 40%;
-}
-
-.slick-next {
-  right: 40%;
-}
 
 .hero-section {
 
@@ -607,6 +553,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 45px;
   }
 
   &__box {
@@ -657,21 +604,121 @@
     font-size: 14px;
   }
 
-  &__slick--prev {
-    fill: $dots-color;
-    stroke: $dots-color;
-    width: 40px;
-    height: 40px;
+  .slider {
+    position: relative;
   }
 
-  &__slick--next {
-    fill: $dots-color;
-    stroke: $dots-color;
+  &__slick {
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    font-size: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid $dots-color;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
+    transition: background-color 0.2s, outline 0.2s, border 0.2s ease-in-out;
+
+    // .slick-active button {             *не работает
+    //   background-color: $fill-color;
+    //   border: 3px solid $accent-color;
+
+    //   svg {
+    //     fill: $accent-color;
+    //     stroke: $accent-color;
+    //   }
+    // }
+
+    &--prev {
+      left: 40%;
+      transform: translateX(4px);
+      bottom: -13px;
+    }
+
+    &--next {
+      right: 40%;
+      transform: rotate(180deg);
+      transform: translateX(-5px);
+    }
+
+    &:focus {
+      border: 3px solid $dots-color;
+      outline: 3px solid $accent-color;
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border-color: $active-color;
+
+      svg {
+        fill: $active-color;
+        stroke: $active-color;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border: transparent;
+
+      svg {
+        fill: $accent-color;
+        stroke: $accent-color;
+      }
+    }
+
   }
 
-  
+  &__arrow {
+    fill: $dots-color;
+    stroke: $dots-color;
+    width: 18.5px;
+    height: 17.83px;
+
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+
+    .slick-active button {
+      background-color: $accent-color;
+    }
+
+    li {
+      margin-left: 15px;
+
+      button {
+        padding: 5px;
+        font-size: 0;
+        background-color: $dots-color;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        transition: background-color 0.3s, border 0.2s ease-in-out;
+
+        &:focus {
+          border: 3px solid $accent-color;
+        }
+
+        &:hover {
+          background-color: #FFF2ED;
+          border: 3px solid $active-color;
+        }
+
+        &:active {
+          background-color: $active-color;
+        }
+      }
+
+    }
+
+  }
+
 }
 
 .mob-app {
@@ -679,6 +726,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    margin-top: 13px;
   }
 
   &__box {
@@ -687,7 +735,7 @@
   }
 
   &__text {
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: 30px;
   }
 
