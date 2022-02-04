@@ -748,6 +748,239 @@
   }
 }
 
+.breadcrumbs {
+  background-color: rgba(255, 122, 80, 0.1);
+
+  &__list {
+    padding: 24px 0;
+    display: flex;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #505050;
+    position: relative;
+    padding-right: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/svg/chevron.svg');
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 10px;
+      right: 5px;
+      top: 3px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.shop {
+
+  &__filters {
+    width: 271px;
+  }
+
+
+}
+
+.filter {
+
+  &__item {
+    background-color: $fill-color;
+    border: 1px solid $boxshadow-color;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 15px;
+  }
+
+  &__block {
+    border-top: 1px solid $boxshadow-color;
+  }
+}
+
+.filter-categories {
+
+  &__list {
+    padding: 25px 15px;
+  }
+
+  &__item {
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &--active {
+      color: $accent-color;
+    }
+  }
+}
+
+.filter-offer {
+
+  &__form {
+    padding: 25px 16px;
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__label {
+    padding-left: 36px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked + .filter-offer__checkbox {
+      background-image: url('../images/svg/checkbox.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid #363853;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: $input-color;
+    border: 1px solid $boxshadow-color;
+    border-radius: 3px;
+    margin: -2px 0 0 -36px;
+  }
+}
+
+.filter-price {
+
+  &__form {
+    padding: 25px 15px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__input-to,
+  &__input-from {
+    background-color: $input-color;
+    border: 1px solid $input-color;
+    border-radius: 3px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 5px;
+  }
+
+  &__label,
+  &__text {
+    font-size: 16px;
+    line-height: 1.2;
+    color: $dots-color;
+  }
+
+  &__label {
+    margin-right: 5px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 25px;
+  height: 2px;
+  background-color: $dots-color;
+  border-radius: 0;
+}
+
+.irs--flat .irs-bar {
+  top: 25px;
+  height: 2px;
+  background-color: $accent-color;
+}
+
+.irs--flat .irs-handle {
+  top: 17px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $accent-color;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-min,
+.irs--flat .irs-max,
+.irs--flat .irs-single {
+  display: none;
+}
+
+.discounts {
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__card {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 24px;
+    background-color: $fill-color;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+}
+
 .footer {
   padding-top: 60px;
 
