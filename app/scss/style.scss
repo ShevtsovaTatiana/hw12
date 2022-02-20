@@ -375,6 +375,7 @@
     line-height: 18px;
     font-weight: 400;
     margin: 10px 0;
+    text-align: center;
   }
 
   &__cardprice {
@@ -503,7 +504,7 @@
   &__arrow {
     padding: 4px 32px;
     border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+    transition: fill 0.8s ease, transform 0.8s;
 
     svg {
       width: 14px;
@@ -714,11 +715,8 @@
           background-color: $active-color;
         }
       }
-
     }
-
   }
-
 }
 
 .mob-app {
@@ -748,50 +746,89 @@
   }
 }
 
-.breadcrumbs {
-  background-color: rgba(255, 122, 80, 0.1);
+.shop {
 
-  &__list {
-    padding: 24px 0;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner {
     display: flex;
   }
 
-  &__item {
-    font-size: 14px;
-    line-height: 1.2;
-    color: #505050;
-    position: relative;
-    padding-right: 16px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/svg/chevron.svg');
-      background-repeat: no-repeat;
-      width: 6px;
-      height: 10px;
-      right: 5px;
-      top: 3px;
-    }
-
-    &:last-child {
-      padding-right: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-
-  }
-}
-
-.shop {
-
   &__filters {
     width: 271px;
+    margin-right: 20px;
   }
 
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
 
+  &__item {
+    margin: 0 0 10px 10px;
+  }
+
+  .product__card {
+    margin-right: 0;
+  }
+
+  &__sort {
+    margin-right: 15px;
+  }
+
+  .jq-selectbox__select {
+    padding: 7px 41px 0 15px;
+    border: 1px solid $dots-color;
+    border-radius: 3px;
+    background: $fill-color;
+    box-shadow: none;
+    font-family: 'Rubik';
+    line-height: 1.2;
+    color: $default-color;
+    text-shadow: none;
+    transition: border 0.2s, color 0.2s ease-in-out;
+
+    &:hover {
+      border: 1px solid $accent-color;
+      color: $accent-color;
+    }
+
+    &:hover {
+      .jq-selectbox__trigger-arrow {
+        filter: invert(58%) sepia(82%) saturate(3380%) hue-rotate(336deg) brightness(100%) contrast(101%);
+      }
+    }
+  }
+
+  .jq-selectbox li.selected,
+  .jq-selectbox li:hover {
+    background-color: $active-color;
+  }
+
+  .jq-selectbox.focused .jq-selectbox__select {
+    border: 1px solid $accent-color;
+  }
+
+  .jq-selectbox__trigger {
+    border: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 6px;
+    height: 11px;
+    border: none;
+    background-image: url('../images/svg/chevron.svg');
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+  }
 }
 
 .filter {
@@ -844,41 +881,62 @@
   }
 
   &__item {
+    position: relative;
     font-size: 18px;
     line-height: 1.2;
+
 
     &:not(:last-child) {
       margin-bottom: 12px;
     }
   }
 
-  &__label {
-    padding-left: 36px;
-  }
-
   &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+    -webkit-appearance: none;
+    appearance: none;
     position: absolute;
 
-    &:checked + .filter-offer__checkbox {
+    &:focus+.filter-offer__label:before {
+      border: 1px solid $accent-color;
+    }
+
+    &:checked+.filter-offer__label:before {
+      border: 1px solid $title-color;
+      content: '';
+      display: block;
       background-image: url('../images/svg/checkbox.svg');
       background-repeat: no-repeat;
       background-position: center;
-      border: 1px solid #363853;
+      top: -2px;
     }
   }
 
-  &__checkbox {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: $input-color;
-    border: 1px solid $boxshadow-color;
-    border-radius: 3px;
-    margin: -2px 0 0 -36px;
+  &__label {
+    padding-left: 36px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-color: $input-color;
+      border: 1px solid $boxshadow-color;
+      border-radius: 3px;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      transition: border 0.2s ease-in-out;
+    }
+
+    &:hover:before {
+      border: 1px solid $accent-color;
+    }
   }
 }
 
@@ -912,6 +970,11 @@
     font-size: 16px;
     line-height: 1;
     margin-right: 5px;
+    transition: border 0.2s ease-in-out;
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
   }
 
   &__label,
